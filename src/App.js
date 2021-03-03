@@ -4,11 +4,11 @@ import { upvote, downvote, login, logout } from './actions'
 import './App.css'
 
 function App() {
-  useEffect(() => alert('assinine'))
   const isLoggedIn = useSelector(state => state.user.isLoggedIn)
   const likes = useSelector(state => state.posts.likes)
   const dispatch = useDispatch()
-
+  useEffect(() => alert('assinine'), [isLoggedIn])
+  
   return (
     <div className="App">
       {isLoggedIn ?
